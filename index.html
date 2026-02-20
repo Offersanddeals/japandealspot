@@ -295,6 +295,65 @@
                 font-size: 34px;
             }
         }
+        /* Search Box */
+        /* Search UI */
+        .search-wrap{
+          display:flex;
+          align-items:center;
+          gap:10px;
+          margin: 14px 0 18px;
+          padding: 12px;
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          background: rgba(255,255,255,.04);
+          box-shadow: var(--shadow);
+        }
+        
+        .search-input{
+          width:100%;
+          padding: 12px 14px;
+          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,.12);
+          background: rgba(255,255,255,.06);
+          color: var(--text);
+          font-size: 14px;
+          font-weight: 750;
+          outline: none;
+        }
+        
+        .search-input::placeholder{
+          color: rgba(255,255,255,.55);
+          font-weight: 700;
+        }
+        
+        .search-input:focus{
+          border-color: rgba(56, 189, 248, .45);
+          box-shadow: 0 0 0 4px rgba(56,189,248,.12);
+        }
+        
+        .search-clear{
+          flex:0 0 auto;
+          width:40px;
+          height:40px;
+          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,.14);
+          background: rgba(255,255,255,.06);
+          color: var(--text);
+          font-size: 22px;
+          font-weight: 900;
+          cursor: pointer;
+        }
+        
+        .search-clear:hover{
+          background: rgba(255,255,255,.10);
+        }
+        
+        .search-count{
+          margin: -6px 0 14px;
+          color: var(--muted);
+          font-weight: 700;
+          font-size: 12.5px;
+        }
 
         /* Section */
         .section-title {
@@ -658,7 +717,7 @@
                               <div class="img">
                                 <img src="images/Insta_post_51.png" style="width: 375px; height: 400px; border-radius: 14px;" alt="Gel">
                               </div>
-                              div class="info">
+                              <div class="info">
                                       <p class="name">
                                         💄 12色 マットヌードリップセット ｜ ベルベット質感・落ちにくいリキッドリップ（ギフトボックス付き）
                                       </p>
@@ -680,7 +739,7 @@
                                         </div>
                                     
                                       </div>
-                                    </div>
+                                </div>
                         <!-- Split: Amazon vs Rakuten -->
                         <div class="split">
                             <div class="vendor">
@@ -4219,6 +4278,69 @@
         mobileMenu.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', closeMobileMenu);
         });
+        // --- Product Search Filter (English + Japanese) ---
+          const searchInput = document.getElementById('productSearch');
+          const clearBtn = document.getElementById('clearSearch');
+          const searchCount = document.getElementById('searchCount');
+        
+          // IMPORTANT: scope it to the Beauty section grid, so it doesn't affect other pages
+          const beautySection = document.getElementById('beauty');
+          const productCards = Array.from(beautySection.querySelectorAll('.card'));
+        
+          // Normalize for better matching (case-insensitive, handles extra spaces)
+          function normalizeText(s) {
+            return (s || '')
+              .toString()
+              .normalize('NFKC')       // helps unify full-width/half-width characters
+              .toLowerCase()
+              .replace(/\s+/g, ' ')
+              .trim();
+          }
+        
+          // Build searchable text for each card once (fast)
+          const cardIndex = productCards.map(card => {
+            // Searches across name + features + any text in the card
+            const haystack = normalizeText(card.innerText);
+            return { card, haystack };
+          });
+        
+          function updateCount(visible, total, q) {
+            if (!q) {
+              searchCount.textContent = `全${total}件を表示中 / Showing all ${total}`;
+            } else if (visible === 0) {
+              searchCount.textContent = `一致なし / No results for “${q}”`;
+            } else {
+              searchCount.textContent = `${visible}件ヒット / ${visible} results for “${q}”`;
+            }
+          }
+        
+          function filterCards(queryRaw) {
+            const query = normalizeText(queryRaw);
+            let visible = 0;
+        
+            cardIndex.forEach(({ card, haystack }) => {
+              const match = !query || haystack.includes(query);
+              card.style.display = match ? '' : 'none';
+              if (match) visible++;
+            });
+        
+            updateCount(visible, productCards.length, queryRaw.trim());
+          }
+        
+          // Live filter while typing
+          searchInput?.addEventListener('input', (e) => {
+            filterCards(e.target.value);
+          });
+        
+          // Clear button
+          clearBtn?.addEventListener('click', () => {
+            searchInput.value = '';
+            filterCards('');
+            searchInput.focus();
+          });
+        
+          // Start with all visible
+          filterCards('');
     </script>
 </body>
 </html>
