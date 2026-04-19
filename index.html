@@ -657,8 +657,8 @@
                         Categories|カテゴリ ▾
                     </button>
                     <div class="menu" id="catMenu">
-                        <a href="#beauty">Beauty & Personal Care|美容・スキンケア</a>
-                        <a href="#elec">Electronics|電子機器</a>
+                        <a href="#" data-filter="beauty">Beauty & Personal Care|美容・スキンケア</a>
+                        <a href="#" data-filter="electronics">Electronics|電子機器</a>
                     </div>
                 </div>
 
@@ -674,8 +674,8 @@
             <!-- Mobile menu -->
             <div class="mobile-menu" id="mobileMenu">
                 <button class="nav-btn primary" type="button" data-target="#home">Home|ホーム</button>
-                <a class="nav-btn" href="#beauty">Beauty & Skin Care美容・スキンケア</a>
-                <a class="nav-btn" href="#elec">Electronics|電子機器</a>
+                <a class="nav-btn" href="#" data-filter="beauty">Beauty & Skin Care美容・スキンケア</a>
+                <a class="nav-btn" href="#" data-filter="electronics">Electronics|電子機器</a>
                 <a class="nav-btn" href="https://www.instagram.com/beauty_personal_care_co/" target="_blank"
                     rel="noopener noreferrer">Instagram</a>
             </div>
@@ -691,29 +691,113 @@
         <section id="home" class="hero anchor">
             <h1>Amazon / Rakuten Best Deals in Japan|楽天 日本の人気セール 🇯🇵</h1>
             <p class="sub">
-                Handpicked Beauty &amp; Skin Care products with official links.|日本で人気の美容・スキンケア商品を厳選<br />
+                Handpicked Beauty &amp; Electronics products with official links.|日本で人気の美容・スキンケア商品を厳選<br />
                 Compare prices and buy from your preferred platform.|Amazon・楽天の価格を比較して、お好みのショップで購入できます
             </p>
         </section>
-
-        <section id="beauty" class="anchor">
-            <h2 class="section-title">BEAUTY &amp; PERSONAL CARE</h2>
-            <p class="desc">Popular beauty and personal care essentials from Japan.
-                Gentle, daily-use products selected for quality and trust,
-                available via official Amazon and Rakuten links.|日本で人気の美容・スキンケア商品を厳選。
-                毎日使えるやさしい処方と、信頼できる定番アイテムを
-                Amazon・楽天公式リンクからご紹介しています</p>
-            <div class="search-wrap" role="search" aria-label="Product search">
-                  <input id="productSearch" class="search-input" type="search"
-                     placeholder="検索 / Search（商品名を入力）"
-                     autocomplete="off" />
-                      <button id="clearSearch" class="search-clear" type="button" aria-label="Clear search">×</button>
+        <section id="products" class="anchor">
+                    <div class="category-intro" data-intro="beauty">
+                        <h2 class="section-title">BEAUTY &amp; PERSONAL CARE</h2>
+                        <p class="desc">
+                            Popular beauty and personal care essentials from Japan.
+                            Gentle, daily-use products selected for quality and trust,
+                            available via official Amazon and Rakuten links. |
+                            日本で人気の美容・パーソナルケア商品を厳選。
+                            毎日使えるやさしい処方と、信頼できる定番アイテムを
+                            Amazon・楽天公式リンクからご紹介しています
+                        </p>
+                    </div>
+                    <div class="category-intro" data-intro="electronics">
+                        <h2 class="section-title">ELECTRONICS</h2>
+                        <p class="desc">
+                            Popular electronics and gadget deals from Japan.
+                            Carefully selected products with official Amazon and Rakuten links. |
+                            日本で人気の電子機器・ガジェット商品を厳選。
+                            信頼できるアイテムをAmazon・楽天公式リンクからご紹介しています
+                        </p>
+                    </div>
+                    <div class="search-wrap" role="search" aria-label="Product search">
+                        <input id="productSearch" class="search-input" type="search"
+                            placeholder="検索 / Search（商品名を入力）"
+                            autocomplete="off" />
+                        <button id="clearSearch" class="search-clear" type="button" aria-label="Clear search">×</button>
                     </div>
                     <p id="searchCount" class="search-count" aria-live="polite"></p>
             <section class="product-section">
                 <div class="grid">
+                     <!-- PRODUCT CARD 94 -->
+                    <article class="card" data-category="electronics" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                        data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
+                            <div class="card-top">
+                              <div class="img">
+                                <img src="images/Insta_post_94.png" style="width: 375px; height: 400px; border-radius: 14px;" alt="Gel">
+                              </div>
+                     <div class="info">
+                            <p class="name">
+                                ✨ アンカー サウンドコア P40i 完全ワイヤレスイヤホン（オフホワイト）<br>
+                                <span>Anker Soundcore P40i True Wireless Earbuds | Ultra Noise Cancelling 2.0 | Bluetooth 5.3 | Multipoint | Up to 60H Playtime</span>
+                            </p>
+                            <div class="features-box">
+                                <div class="features no">
+                                  <p>❌ 周囲の騒音が気になり、音楽や通話に集中しにくい<br>
+                                  <span>Background noise can make it hard to focus on music or calls</span></p>
+                                  <p>❌ バッテリー持ちが短く、頻繁な充電が必要になることがある<br>
+                                  <span>Short battery life often requires frequent recharging</span></p>
+                                  <p>❌ 複数デバイスの切り替えが面倒で使いにくい<br>
+                                  <span>Switching between multiple devices can be inconvenient</span></p>
+                                </div>
+                                <div class="features yes">
+                                  <p>✅ ウルトラノイズキャンセリング2.0搭載で、周囲の騒音をしっかり低減<br>
+                                  <span>Ultra Noise Cancelling 2.0 effectively reduces ambient noise for immersive listening</span></p>
+                                  <p>✅ 最大60時間の長時間再生で、外出や旅行でも安心<br>
+                                  <span>Up to 60 hours of total playback for extended use without worry</span></p>
+                                  <p>✅ Bluetooth 5.3対応で安定した接続と低遅延を実現<br>
+                                  <span>Bluetooth 5.3 ensures stable connection and low latency performance</span></p>
+                                  <p>✅ マルチポイント接続対応で、複数デバイスをスムーズに切り替え可能<br>
+                                  <span>Multipoint connection allows seamless switching between devices</span></p>
+                                  <p>✅ 軽量で快適な装着感、日常使いに最適なデザイン<br>
+                                  <span>Lightweight and comfortable fit, ideal for everyday use</span></p>
+                                  <p>✅ PSE認証取得で安心して使用できる安全設計<br>
+                                  <span>PSE compliant for safe and reliable use</span></p>
+                                </div>
+                            </div>
+                    </div>
+                        <!-- Split: Amazon vs Rakuten -->
+                        <div class="split">
+                            <div class="vendor">
+                                <div class="vendor-head">
+                                    <p class="vendor-title">Amazon</p>
+                                    <span class="badge amazon">Official</span>
+                                </div>
+                                <div class="price-row">
+                                    <span class="price-label">Price</span>
+                                    <span class="price-note">※ 価格は変動する場合があります</span>
+                                    <span class="price amazon-price">¥7990*</span>
+                                </div>
+                                <a class="btn amazon" href="https://amzn.to/4sMCnLV" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Buy on Amazon
+                                </a>
+                            </div>
+                            <div class="vendor">
+                                <div class="vendor-head">
+                                    <p class="vendor-title">Rakuten</p>
+                                    <span class="badge rakuten">Points</span>
+                                </div>
+                                <div class="price-row">
+                                    <span class="price-label">Price</span>
+                                    <span class="price-note">※ 価格は変動する場合があります</span>
+                                    <span class="price rakuten-price">¥7990*</span>
+                                </div>
+                                <a class="btn rakuten" href="https://a.r10.to/hkKa4D" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Buy on Rakuten
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                     <!-- PRODUCT CARD 93 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -790,7 +874,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 92 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -867,7 +951,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 91 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -946,7 +1030,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 90 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1007,7 +1091,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 89 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1068,7 +1152,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 88 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1129,7 +1213,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 87 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1190,7 +1274,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 86 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1251,7 +1335,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 85 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1312,7 +1396,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 84 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1373,7 +1457,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 83 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1434,7 +1518,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 82 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1495,7 +1579,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 81 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1556,7 +1640,7 @@
                         </div>
                     </article>
                      <!-- PRODUCT CARD 80 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1602,7 +1686,7 @@
                         
                     </article>
                     <!-- PRODUCT CARD 79 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1689,7 +1773,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 78 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1778,7 +1862,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 77 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1858,7 +1942,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 76 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -1938,7 +2022,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 75 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2029,7 +2113,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 74 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2108,7 +2192,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 73 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2193,7 +2277,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 72 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2280,7 +2364,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 71 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2359,7 +2443,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 70 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2438,7 +2522,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 69 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2525,7 +2609,7 @@
                         </div>
                     </article>
                      <!-- PRODUCT CARD 68 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2608,7 +2692,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 67 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2686,7 +2770,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 66 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2759,7 +2843,7 @@
                         </div>
                     </article>
                      <!-- PRODUCT CARD 65 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2832,7 +2916,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 64 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2905,7 +2989,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 63 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -2979,7 +3063,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 62 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3052,7 +3136,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 61 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3112,7 +3196,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 60 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3176,7 +3260,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 59 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3240,7 +3324,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 58 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3300,7 +3384,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 57 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3360,7 +3444,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 56 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3424,7 +3508,7 @@
                         </div>
                     </article>
                      <!-- PRODUCT CARD 55 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3488,7 +3572,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 54 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3552,7 +3636,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 53 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3616,7 +3700,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 52 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3680,7 +3764,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 51 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3744,7 +3828,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 50 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3808,7 +3892,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 49 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3872,7 +3956,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 48 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -3936,7 +4020,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 47 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4001,7 +4085,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 46 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4066,7 +4150,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 45 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4133,7 +4217,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 44 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4197,7 +4281,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 43 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4267,7 +4351,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 42 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4337,7 +4421,7 @@
                     </article>
                     
                     <!-- PRODUCT CARD 41 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4406,7 +4490,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 40 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4469,7 +4553,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 39 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4532,7 +4616,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 38 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4595,7 +4679,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 37 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -4658,7 +4742,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 36 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -4721,7 +4805,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 35 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -4786,7 +4870,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 34 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                       <div class="img">
@@ -4851,7 +4935,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 33 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -4916,7 +5000,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 32 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -4981,7 +5065,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 31 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                 <div class="img">
@@ -5045,7 +5129,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 30 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                               <div class="img">
@@ -5110,7 +5194,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 29 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5175,7 +5259,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 28 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                       <div class="img">
@@ -5244,7 +5328,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 27 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5309,7 +5393,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 26 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5374,7 +5458,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 25 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5439,7 +5523,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 24 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5503,7 +5587,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 23 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5570,7 +5654,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 22 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
                             <div class="card-top">
                                   <div class="img">
@@ -5637,7 +5721,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 21 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                             <div class="card-top">
@@ -5704,7 +5788,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 20 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -5770,7 +5854,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 19 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -5838,7 +5922,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 18 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -5908,7 +5992,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 1 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -5982,7 +6066,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 2 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6054,7 +6138,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 3 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6128,7 +6212,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 4 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                   <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6201,7 +6285,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 5 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6275,7 +6359,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 6 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6349,7 +6433,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 7 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6421,7 +6505,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 8 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6495,7 +6579,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 9 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6569,7 +6653,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 10 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6643,7 +6727,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 11 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6717,7 +6801,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 12 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6792,7 +6876,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 13 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6861,7 +6945,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 14 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -6933,7 +7017,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 15 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                  <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -7004,7 +7088,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 16 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -7074,7 +7158,7 @@
                         </div>
                     </article>
                     <!-- PRODUCT CARD 17 -->
-                    <article class="card" data-amazon-asin="ASIN_HERE_OPTIONAL"
+                    <article class="card" data-category="beauty" data-amazon-asin="ASIN_HERE_OPTIONAL"
                         data-rakuten-itemcode="RAKUTEN_ITEMCODE_OPTIONAL">
 
                         <div class="card-top">
@@ -7202,9 +7286,6 @@
         // chatgpt new section end here for electronics
 
         // Smooth scroll for Home button
-        document.getElementById('homeBtn').addEventListener('click', () => {
-            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
-        });
 
         // Dropdown
         const catBtn = document.getElementById('catBtn');
@@ -7225,13 +7306,35 @@
         catBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
         document.addEventListener('click', closeMenu);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-        catMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-            closeMenu();
-            const id = a.getAttribute('href');
-            const el = document.querySelector(id);
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }));
 
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.card');
+            const intros = document.querySelectorAll('.category-intro');
+        
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                card.style.display = (category === 'all' || cardCategory === category) ? '' : 'none';
+            });
+        
+            intros.forEach(intro => {
+                const introCategory = intro.getAttribute('data-intro');
+                intro.style.display = (category === 'all' || introCategory === category) ? '' : 'none';
+            });
+        }
+
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            filterCategory('all');
+            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        catMenu.querySelectorAll('[data-filter]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeMenu();
+                const category = a.getAttribute('data-filter');
+                filterCategory(category);
+            });
+        });
         /*
           IMPORTANT ABOUT PRICES:
           You CANNOT fetch Amazon/Rakuten product page prices directly from the browser (CORS + policy).
@@ -7283,6 +7386,16 @@
                 closeMobileMenu();
                 const target = btn.getAttribute('data-target');
                 document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ✅ ADD THIS EXACTLY HERE
+        mobileMenu.querySelectorAll('[data-filter]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = link.getAttribute('data-filter');
+                closeMobileMenu();
+                filterCategory(category);
             });
         });
 
