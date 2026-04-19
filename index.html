@@ -645,7 +645,7 @@
                 <div class="logo"><img src="images/Beauty.png"
                         style="width:38px;height:38px;border-radius:12px;" alt="logo"></div>
                 <div>
-                    <span>Beauty & Personal Care</span>
+                    <span>Beauty & Electronics</span>
                     <small>Amazon + Rakuten Deals ・楽天のお得情報</small>
                 </div>
             </a>
@@ -657,7 +657,7 @@
                         Categories|カテゴリ ▾
                     </button>
                     <div class="menu" id="catMenu">
-                        <a href="#beauty">Beauty & Skin Care|美容・スキンケア</a>
+                        <a href="#beauty">Beauty & Personal Care|美容・スキンケア</a>
                         <a href="#elec">Electronics|電子機器</a>
                     </div>
                 </div>
@@ -697,8 +697,8 @@
         </section>
 
         <section id="beauty" class="anchor">
-            <h2 class="section-title">BEAUTY &amp; SKIN CARE</h2>
-            <p class="desc">Popular beauty and skincare essentials from Japan.
+            <h2 class="section-title">BEAUTY &amp; PERSONAL CARE</h2>
+            <p class="desc">Popular beauty and personal care essentials from Japan.
                 Gentle, daily-use products selected for quality and trust,
                 available via official Amazon and Rakuten links.|日本で人気の美容・スキンケア商品を厳選。
                 毎日使えるやさしい処方と、信頼できる定番アイテムを
@@ -7158,6 +7158,49 @@
     </main>
 
     <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+  // all your current script here
+
+        // chatgpt new section
+        function initProductSearch(sectionId, inputId, clearBtnId, countId) {
+              const section = document.getElementById(sectionId);
+              const searchInput = document.getElementById(inputId);
+              const clearBtn = document.getElementById(clearBtnId);
+              const searchCount = document.getElementById(countId);
+            
+              if (!section || !searchInput || !clearBtn || !searchCount) return;
+            
+              const productCards = Array.from(section.querySelectorAll('.card'));
+            
+              function filterCards(query) {
+                let visible = 0;
+            
+                productCards.forEach(card => {
+                  const match = card.innerText.toLowerCase().includes(query.toLowerCase());
+                  card.style.display = match ? '' : 'none';
+                  if (match) visible++;
+                });
+            
+                searchCount.textContent = visible + " results";
+              }
+            
+              searchInput.addEventListener('input', (e) => {
+                filterCards(e.target.value);
+              });
+            
+              clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                filterCards('');
+              });
+            
+              filterCards('');
+            }
+            
+            initProductSearch('beauty', 'productSearch', 'clearSearch', 'searchCount');
+            initProductSearch('elec', 'electronicsSearch', 'clearElectronicsSearch', 'electronicsSearchCount');
+        // chatgpt new section end here for electronics
+
         // Smooth scroll for Home button
         document.getElementById('homeBtn').addEventListener('click', () => {
             document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
@@ -7247,69 +7290,7 @@
         mobileMenu.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', closeMobileMenu);
         });
-        // --- Product Search Filter (English + Japanese) ---
-          const searchInput = document.getElementById('productSearch');
-          const clearBtn = document.getElementById('clearSearch');
-          const searchCount = document.getElementById('searchCount');
-        
-          // IMPORTANT: scope it to the Beauty section grid, so it doesn't affect other pages
-          const beautySection = document.getElementById('beauty');
-          const productCards = Array.from(beautySection.querySelectorAll('.card'));
-        
-          // Normalize for better matching (case-insensitive, handles extra spaces)
-          function normalizeText(s) {
-            return (s || '')
-              .toString()
-              .normalize('NFKC')       // helps unify full-width/half-width characters
-              .toLowerCase()
-              .replace(/\s+/g, ' ')
-              .trim();
-          }
-        
-          // Build searchable text for each card once (fast)
-          const cardIndex = productCards.map(card => {
-            // Searches across name + features + any text in the card
-            const haystack = normalizeText(card.innerText);
-            return { card, haystack };
-          });
-        
-          function updateCount(visible, total, q) {
-            if (!q) {
-              searchCount.textContent = `全${total}件を表示中 / Showing all ${total}`;
-            } else if (visible === 0) {
-              searchCount.textContent = `一致なし / No results for “${q}”`;
-            } else {
-              searchCount.textContent = `${visible}件ヒット / ${visible} results for “${q}”`;
-            }
-          }
-        
-          function filterCards(queryRaw) {
-            const query = normalizeText(queryRaw);
-            let visible = 0;
-        
-            cardIndex.forEach(({ card, haystack }) => {
-              const match = !query || haystack.includes(query);
-              card.style.display = match ? '' : 'none';
-              if (match) visible++;
             });
-        
-            updateCount(visible, productCards.length, queryRaw.trim());
-          }
-        
-          // Live filter while typing
-          searchInput?.addEventListener('input', (e) => {
-            filterCards(e.target.value);
-          });
-        
-          // Clear button
-          clearBtn?.addEventListener('click', () => {
-            searchInput.value = '';
-            filterCards('');
-            searchInput.focus();
-          });
-        
-          // Start with all visible
-          filterCards('');
     </script>
 </body>
 </html>
